@@ -1,0 +1,21 @@
+{
+  "name": "fireborn-guard",
+  "version": "0.1.0",
+  "description": "Spend cap and loop breaker for Claude Code. Soft line warns, hard line stops, repeated calls get cut off.",
+  "author": {
+    "name": "6hn68"
+  },
+  "homepage": "https://github.com/6hn68/fireborn-guard",
+  "repository": "https://github.com/6hn68/fireborn-guard",
+  "license": "MIT",
+  "keywords": [
+    "cost",
+    "budget",
+    "spend",
+    "loop",
+    "hooks"
+  ],
+  "network": {
+    "hosts": []
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "fireborn",
+  "owner": {
+    "name": "6hn68"
+  },
+  "metadata": {
+    "description": "Fireborn plugins for Claude Code: spend caps and loop breakers."
+  },
+  "plugins": [
+    {
+      "name": "fireborn-guard",
+      "source": "./plugins/fireborn-guard",
+      "description": "Stops a Claude Code session past a dollar line you set, and breaks tool-call loops before they burn your plan.",
+      "version": "0.1.0",
+      "license": "MIT",
+      "keywords": [
+        "cost",
+        "budget",
+        "spend",
+        "loop",
+        "hooks"
+      ]
+    }
+  ]
+}

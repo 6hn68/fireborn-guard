@@ -1,0 +1,14 @@
+Fireborn Guard - notices
+
+No third-party source code is included. Every line was written for this
+project. These open-source projects showed how the ideas can work and are
+credited here:
+
+- getagentseal/codeburn (MIT): blocking from a Claude Code PreToolUse hook
+  by pricing the session transcript; a soft line that tells the agent and a
+  hard line that denies; same-call and same-failed-command loop stops; a
+  per-session allow. Rewritten here, no CodeBurn code is included.
+- BerriAI/litellm (MIT): stopping runaway agent loops. Idea only.
+
+Model prices in plugins/fireborn-guard/scripts/prices.json come from the
+public pricing pages of Anthropic and OpenAI (links inside the file).
