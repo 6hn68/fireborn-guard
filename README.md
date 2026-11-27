@@ -32,6 +32,10 @@ Or inside a Claude Code session:
 
 Needs `python3` on your PATH. No account, no network calls.
 
+## Privacy
+
+Fireborn Guard never sees your API key or password. It only reads the session transcript Claude Code already keeps on your machine, to count tokens and spot repeated tool calls. Repeats are tracked as short hashes, not your text. It makes no network calls and there is no server.
+
 ## What it does
 
 **Spend cap.** It estimates what the session has used at API list price. Past the soft line ($5 by default) Claude is told the session is getting expensive. Past the hard line ($15 by default) further tool calls are denied. A model it does not know is priced at the most expensive known rate, never at $0.
