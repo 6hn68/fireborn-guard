@@ -4,6 +4,18 @@ A spend cap and loop breaker for Claude Code, shipped as a plugin.
 
 Interactive Claude Code has no hard dollar stop of its own. A long session or a stuck agent can keep calling the same tool until your plan or your API bill runs out. Fireborn Guard sits in a `PreToolUse` hook and checks every tool call before it runs.
 
+## Why this exists: one review, 34 subagents
+
+A Claude Code user on r/ClaudeAI (u/Substantial-Aide-66, 25 November 2026) asked the tool to review three hours of work. In their words: "i cant believe its open 34 subagents and eat almost 50% my weekly usage limit on ultra subs. 660 mill token in total in 50 minutes." ([original post](https://www.reddit.com/r/ClaudeAI/comments/1y50f53/accidentaly_nuking_my_usage_limit_in_1_hour_on/)) Those numbers are the poster's own report, not verified by us, and we do not convert them into dollars.
+
+The top reply gave the fix in one line: "Put a number on the fan-out in the prompt itself. 'Use at most 3 subagents, and ask me before starting more' is the line that would have stopped this at 3 instead of 34." (u/tariqosmani, same thread.)
+
+This plugin is the same idea as a hard stop instead of a prompt suggestion. The soft line ($5 by default) warns once the session gets expensive; the hard line ($15 by default) denies further tool calls; the loop breaker stops a failing command after 5 failures in a row. One honest limit: those lines are API list-price estimates in dollars, and this case burned a subscription weekly allowance in points. The two are not the same unit, so we do not claim installing the plugin would have stopped this exact bill. What the cap does stop is a session spending without anything outside the agent saying no.
+
+```
+claude plugin marketplace add 6hn68/fireborn-guard && claude plugin install fireborn-guard@fireborn
+```
+
 ## Install
 
 From your shell:
